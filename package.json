@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "System Under Test",
   "scripts": {
-    "install:all": "cd ./frontend && install && cd ../backend && npm install",
-    "start:frontend": "cd ./frontend && npm start",
-    "start:backend": "cd ./backend && npm start"
+    "install-app": "cd ./frontend && npm install && cd ../backend && npm install",
+    "start-app": "concurrently \"cd ./frontend && npm start\" \"cd ./backend && npm start\""
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Test-Forge/sut-playground.git"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
 }
