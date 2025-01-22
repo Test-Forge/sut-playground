@@ -1,4 +1,4 @@
-const { writeJSON } = require("../utils/jsonDb");
+const { writeJSON } = require("./jsonDB");
 const {readJSON} = require("./jsonDB");
 
 const saveLog = (action, details) => {

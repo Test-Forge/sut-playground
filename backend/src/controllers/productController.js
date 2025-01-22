@@ -1,4 +1,4 @@
-const { readJSON, writeJSON } = require("../utils/jsonDb");
+const { readJSON, writeJSON } = require("../utils/jsonDB");
 const { saveLog } = require("../utils/logging");
 
 // Get Products

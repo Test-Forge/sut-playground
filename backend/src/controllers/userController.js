@@ -1,4 +1,4 @@
-const { readJSON } = require("../utils/jsonDb");
+const { readJSON } = require("../utils/jsonDB");
 
 // Login User
 exports.loginUser = (req, res) => {

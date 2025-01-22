@@ -1,4 +1,4 @@
-const { readJSON } = require("../utils/jsonDb");
+const { readJSON } = require("../utils/jsonDB");
 
 exports.getAnalytics = (req, res) => {
     try {

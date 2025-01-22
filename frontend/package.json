@@ -13,8 +13,7 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "install:all": "npm install && cd ./backend && npm install",
-    "start:frontend": "react-scripts start"
+    "start": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
