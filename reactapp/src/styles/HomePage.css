@@ -1,0 +1,57 @@
+/* HomePage Description Card */
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    background-color: #f7f7f7;
+}
+
+.description-card {
+    background-color: white;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.description-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.description-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.description-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description-card ul {
+    list-style: none;
+    padding-left: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.description-card ul li {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.description-card ul li::before {
+    content: '✔'; /* Add a modern checkmark */
+    font-size: 0.9rem;
+    color: #28a745;
+    margin-right: 10px;
+}

@@ -1,0 +1,182 @@
+/* Advanced Styles */
+.advanced-web-elements-page {
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advanced-web-elements-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.advanced-web-elements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Elements */
+.advanced-web-element {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.advanced-web-element-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.advanced-web-element-output {
+    margin-top: 15px;
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Counter */
+.advanced-web-element-counter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.advanced-web-element-counter-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 5px;
+}
+
+.advanced-web-element-button,
+.advanced-web-element-button-reset {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.advanced-web-element-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.advanced-web-element-button:hover {
+    background-color: #0056b3;
+}
+
+.advanced-web-element-button-reset {
+    background-color: #ffc107;
+    color: white;
+}
+
+.advanced-web-element-button-reset:hover {
+    background-color: #e0a800;
+}
+
+.advanced-web-element-error {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+}
+
+/* Shadow Host */
+.shadow-host {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Input*/
+.advanced-web-element-input{
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Dropdown */
+.advanced-web-element-dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.advanced-web-element-dropdown:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Checkbox Group */
+.advanced-web-element-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.advanced-web-element-checkbox {
+    margin-right: 10px;
+}
+
+/* Radio Buttons */
+.advanced-web-element-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.advanced-web-element-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Toggle Button */
+.advanced-web-element-toggle-group {
+    margin-top: 10px;
+}
+
+.advanced-web-element-toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.advanced-web-element-toggle-button.enabled {
+    background-color: #28a745;
+}
+
+.advanced-web-element-toggle-button.disabled {
+    background-color: #dc3545;
+}
+
+.advanced-web-element-toggle-button:hover {
+    opacity: 0.9;
+}

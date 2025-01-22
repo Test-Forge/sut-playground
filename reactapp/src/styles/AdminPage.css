@@ -1,0 +1,82 @@
+/* AdminPage.css */
+.admin-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.admin-page h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+.analytics-section,
+.logs-section,
+.reset-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-section h2,
+.logs-section h2,
+.reset-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Space between left and right groups */
+    align-items: center;
+    width: 100%;
+}
+
+.left-buttons {
+    display: flex; /* Align buttons inline */
+    gap: 10px; /* Horizontal spacing between buttons */
+}
+
+.right-button {
+    display: flex; /* Ensure alignment for the Logout button */
+}
+
+/* Styling for Reset buttons */
+.reset-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #356fdc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #2a45b0;
+}
+
+/* Styling for Logout button */
+.admin-logout-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-logout-button:hover {
+    background-color: #b02a37;
+}

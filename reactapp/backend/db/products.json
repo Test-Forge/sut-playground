@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": "Dell XPS 15",
+    "category": "Laptops",
+    "price": 1599.99
+  },
+  {
+    "id": 2,
+    "name": "iPhone 14 Pro Max",
+    "category": "Smartphones",
+    "price": 1199.99
+  },
+  {
+    "id": 3,
+    "name": "PlayStation 5",
+    "category": "Accessories",
+    "price": 499.99
+  },
+  {
+    "id": 4,
+    "name": "MacBook Pro 16-inch",
+    "category": "Laptops",
+    "price": 2499.99
+  },
+  {
+    "id": 5,
+    "name": "Samsung Galaxy S23 Ultra",
+    "category": "Smartphones",
+    "price": 1399.99
+  },
+  {
+    "id": 6,
+    "name": "Xbox Series X",
+    "category": "Accessories",
+    "price": 499.99
+  },
+  {
+    "id": 7,
+    "name": "Lenovo Legion 5 Pro",
+    "category": "Laptops",
+    "price": 1449.99
+  },
+  {
+    "id": 8,
+    "name": "Google Pixel 7 Pro",
+    "category": "Smartphones",
+    "price": 899.99
+  },
+  {
+    "id": 9,
+    "name": "Oculus Quest 2",
+    "category": "Accessories",
+    "price": 399.99
+  },
+  {
+    "id": 10,
+    "name": "Razer Blade 15",
+    "category": "Laptops",
+    "price": 2299.99
+  },
+  {
+    "id": 11,
+    "name": "OnePlus 11",
+    "category": "Smartphones",
+    "price": 749.99
+  },
+  {
+    "id": 12,
+    "name": "Corsair Gaming Headset HS80",
+    "category": "Accessories",
+    "price": 129.99
+  },
+  {
+    "id": 13,
+    "name": "ASUS ROG Zephyrus G14",
+    "category": "Laptops",
+    "price": 1699.99
+  },
+  {
+    "id": 14,
+    "name": "Sony Xperia 1 IV",
+    "category": "Smartphones",
+    "price": 999.99
+  },
+  {
+    "id": 15,
+    "name": "Logitech G Pro Wireless Mouse",
+    "category": "Accessories",
+    "price": 99.99
+  },
+  {
+    "id": 16,
+    "name": "HP Spectre x360",
+    "category": "Laptops",
+    "price": 1399.99
+  },
+  {
+    "id": 17,
+    "name": "Samsung Galaxy Z Fold 4",
+    "category": "Smartphones",
+    "price": 1799.99
+  },
+  {
+    "id": 18,
+    "name": "Nintendo Switch OLED Model",
+    "category": "Accessories",
+    "price": 349.99
+  },
+  {
+    "id": 19,
+    "name": "Acer Predator Helios 300",
+    "category": "Laptops",
+    "price": 1299.99
+  },
+  {
+    "id": 20,
+    "name": "Google Pixel 7",
+    "category": "Smartphones",
+    "price": 699.99
+  },
+  {
+    "id": 21,
+    "name": "Elgato Stream Deck",
+    "category": "Accessories",
+    "price": 149.99
+  },
+  {
+    "id": 22,
+    "name": "MSI Stealth 15M",
+    "category": "Laptops",
+    "price": 1599.99
+  },
+  {
+    "id": 23,
+    "name": "Xiaomi 13 Pro",
+    "category": "Smartphones",
+    "price": 799.99
+  },
+  {
+    "id": 24,
+    "name": "Razer BlackWidow V3 Keyboard",
+    "category": "Accessories",
+    "price": 199.99
+  },
+  {
+    "id": 25,
+    "name": "LG Gram 17",
+    "category": "Laptops",
+    "price": 1899.99
+  },
+  {
+    "id": 26,
+    "name": "Asus Zenfone 9",
+    "category": "Smartphones",
+    "price": 699.99
+  },
+  {
+    "id": 27,
+    "name": "HyperX Cloud II Gaming Headset",
+    "category": "Accessories",
+    "price": 99.99
+  },
+  {
+    "id": 28,
+    "name": "Dell Alienware m15 R7",
+    "category": "Laptops",
+    "price": 2299.99
+  },
+  {
+    "id": 29,
+    "name": "iPhone SE 3rd Gen",
+    "category": "Smartphones",
+    "price": 429.99
+  },
+  {
+    "id": 30,
+    "name": "Logitech G502 X Plus Mouse",
+    "category": "Accessories",
+    "price": 149.99
+  },
+  {
+    "id": 31,
+    "name": "MacBook Air M2",
+    "category": "Laptops",
+    "price": 1299.99
+  },
+  {
+    "id": 32,
+    "name": "Samsung Galaxy A53",
+    "category": "Smartphones",
+    "price": 349.99
+  },
+  {
+    "id": 33,
+    "name": "SteelSeries Arctis Nova Pro",
+    "category": "Accessories",
+    "price": 249.99
+  },
+  {
+    "id": 34,
+    "name": "Razer Blade Stealth 13",
+    "category": "Laptops",
+    "price": 1799.99
+  },
+  {
+    "id": 35,
+    "name": "OnePlus Nord N20",
+    "category": "Smartphones",
+    "price": 299.99
+  },
+  {
+    "id": 36,
+    "name": "Xbox Elite Series 2 Controller",
+    "category": "Accessories",
+    "price": 179.99
+  },
+  {
+    "id": 37,
+    "name": "Microsoft Surface Laptop 5",
+    "category": "Laptops",
+    "price": 1549.99
+  },
+  {
+    "id": 38,
+    "name": "iPhone 13 Mini",
+    "category": "Smartphones",
+    "price": 599.99
+  },
+  {
+    "id": 39,
+    "name": "PlayStation DualSense Controller",
+    "category": "Accessories",
+    "price": 69.99
+  },
+  {
+    "id": 40,
+    "name": "Lenovo ThinkPad X1 Carbon",
+    "category": "Laptops",
+    "price": 1799.99
+  },
+  {
+    "id": 41,
+    "name": "Samsung Galaxy S22",
+    "category": "Smartphones",
+    "price": 799.99
+  },
+  {
+    "id": 42,
+    "name": "Razer Kraken Gaming Headset",
+    "category": "Accessories",
+    "price": 79.99
+  },
+  {
+    "id": 43,
+    "name": "Asus TUF Gaming A15",
+    "category": "Laptops",
+    "price": 1399.99
+  },
+  {
+    "id": 44,
+    "name": "Xiaomi Redmi Note 12",
+    "category": "Smartphones",
+    "price": 249.99
+  },
+  {
+    "id": 45,
+    "name": "Corsair K70 RGB Keyboard",
+    "category": "Accessories",
+    "price": 159.99
+  },
+  {
+    "id": 46,
+    "name": "HP Envy x360",
+    "category": "Laptops",
+    "price": 1199.99
+  },
+  {
+    "id": 47,
+    "name": "Realme GT 3",
+    "category": "Smartphones",
+    "price": 549.99
+  },
+  {
+    "id": 48,
+    "name": "Razer DeathAdder V3 Mouse",
+    "category": "Accessories",
+    "price": 69.99
+  },
+  {
+    "id": 49,
+    "name": "Gigabyte AERO 16",
+    "category": "Laptops",
+    "price": 2599.99
+  },
+  {
+    "id": 50,
+    "name": "Google Pixel 6a",
+    "category": "Smartphones",
+    "price": 449.99
+  }
+]

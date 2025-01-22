@@ -1,0 +1,43 @@
+/* Control Buttons */
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.control-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative; /* Ensures the bubble is positioned relative to the button */
+    transition: background-color 0.3s ease;
+}
+
+.control-button:hover {
+    background-color: #0056b3;
+}
+
+.view-cart-button {
+    position: relative;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -10px; /* Adjusted to overlay the top right */
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
