@@ -1,0 +1,89 @@
+/* global.css */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* Page Specific Styles */
+.page {
+    text-align: center;
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.heading-login {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Input Styles */
+.text-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.text-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.input-error {
+    border-color: #e94560 !important;
+    background-color: #ffe6e6;
+}
+
+.error-text {
+    color: #e94560;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+
+.form-group {
+    margin-bottom: 5px;
+}

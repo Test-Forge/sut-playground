@@ -1,0 +1,24 @@
+/* Filters.css */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-select,
+.filter-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 30%;
+    min-width: 150px;
+}
+
+.filter-select:focus,
+.filter-input:focus {
+    border-color: #007bff;
+    outline: none;
+}

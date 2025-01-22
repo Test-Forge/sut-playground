@@ -1,0 +1,4 @@
+{
+  "watch": ["src"],
+  "ignore": ["db/products.json", "db/logs.json" , "db/history.json"]
+}

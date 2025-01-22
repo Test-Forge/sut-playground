@@ -1,0 +1,31 @@
+/* AnalyticsDashboard.css */
+.analytics-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two-column layout */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.chart-container {
+    height: 250px; /* Fixed height for uniformity */
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+.chart-container h3 {
+    font-size: 16px;
+    margin-bottom: 5px; /* Compact margin */
+    color: #333;
+}
+
+.chart-container canvas {
+    max-width: 100%; /* Ensure chart fits horizontally */
+    height: 250px; /* Fixed height for charts */
+    margin: 0 auto; /* Center-align the chart */
+}
