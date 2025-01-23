@@ -14,7 +14,9 @@ import "../styles/AnalyticsDashboard.css";
 // Register components
 ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
-const AnalyticsDashboard = ({ data }) => {
+const AnalyticsDashboard = ({ data, isLoading }) => {
+
+    const totalRevenue = typeof data.totalRevenue === "number" ? data.totalRevenue : 0;
 
     const barOptions = {
         maintainAspectRatio: true, // Maintain fixed aspect ratio
@@ -54,9 +56,17 @@ const AnalyticsDashboard = ({ data }) => {
         ],
     };
 
+    if (isLoading) {
+        return <p>Loading analytics...</p>;
+    }
+
+    if (!data) {
+        return <p>No analytics data available.</p>;
+    }
+
     return (
         <div className="analytics-dashboard">
-            <h2>Total Revenue: ${data.totalRevenue.toFixed(2)}</h2>
+            <h2>Total Revenue: ${totalRevenue.toFixed(2)}</h2>
             <div className="chart-container">
                 <h3>Sales by Category</h3>
                 <Bar data={barData} key={`bar-${JSON.stringify(barData)}`} options={barOptions}/>

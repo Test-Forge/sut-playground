@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import LogsTable from "../components/LogsTable";
 import AnalyticsDashboard from "../components/AnalyticsDashboard";
+import AlertPopover from "../components/AlertPopover";
 import API from "../utils/api";
 import "../styles/AdminPage.css";
 
@@ -9,6 +10,27 @@ const AdminPage = ({handleLogout}) => {
     const [analyticsData, setAnalyticsData] = useState(null);
     const [isLoadingLogs, setIsLoadingLogs] = useState(true);
     const [isLoadingAnalytics, setIsLoadingAnalytics] = useState(true);
+
+    const [alert, setAlert] = useState({ message: "", type: "", visible: false });
+    const showAlert = (message, type = "info") => {
+        setAlert({ message, type, visible: true });
+        // Auto-close after 5 seconds
+        setTimeout(() => setAlert({ ...alert, visible: false }), 5000);
+    };
+
+    const fetchAnalyticsData = async () => {
+        try {
+            setIsLoadingAnalytics(true);
+            const response = await API.get("/analytics");
+            setAnalyticsData(response.data);
+        } catch (err) {
+            console.error("Error fetching analytics data:", err);
+            showAlert("Failed to fetch analytics data.", "error");
+        } finally {
+            setIsLoadingAnalytics(false);
+        }
+    };
+
 
     useEffect(() => {
         const fetchLogs = async () => {
@@ -38,42 +60,46 @@ const AdminPage = ({handleLogout}) => {
     }, []);
 
     const handleResetProducts = async () => {
-        if (window.confirm("Are you sure you want to reset the product list to its initial state?")) {
             try {
                 await API.post("/products/reset");
-                alert("Products have been reset to their initial state.");
-                await handleLogsRefresh()
+                showAlert("Products have been reset to their initial state.", "success");
+                // Refresh logs
+                await handleLogsRefresh();
+
+                // Refresh analytics data
+                await fetchAnalyticsData();
             } catch (err) {
                 console.error("Error resetting products:", err);
-                alert("Failed to reset products. Please try again.");
+                showAlert("Failed to reset products. Please try again.", "error");
             }
-        }
     };
 
     const handleResetCheckout = async () => {
-        if (window.confirm("Are you sure you want to reset the product list to its initial state?")) {
             try {
                 await API.post("/checkout/reset");
-                alert("Checkout have been reset to their initial state.");
+                showAlert("Checkout have been reset to their initial state.", "success");
                 await handleLogsRefresh()
+
+                // Clear analytics data temporarily
+                setAnalyticsData(null);
+
+                // Optionally refresh analytics data
+                await fetchAnalyticsData();
             } catch (err) {
                 console.error("Error resetting checkout:", err);
-                alert("Failed to reset checkout. Please try again.");
+                showAlert("Failed to reset checkout. Please try again.", "error");
             }
-        }
     };
 
     const handleResetLogs = async () => {
-        if (window.confirm("Are you sure you want to reset the product list to its initial state?")) {
             try {
                 await API.post("/logs/reset");
-                alert("Logs have been reset to their initial state.");
+                showAlert("Logs have been reset to their initial state.", "success");
                 await handleLogsRefresh()
             } catch (err) {
                 console.error("Error resetting logs:", err);
-                alert("Failed to reset logs. Please try again.");
+                showAlert("Failed to reset logs. Please try again.", "error");
             }
-        }
     };
 
     const handleLogsRefresh = async () => {
@@ -97,7 +123,7 @@ const AdminPage = ({handleLogout}) => {
                     <p>Loading analytics...</p>
                 ) : analyticsData ? (
                     //<p> Analytics data loaded. </p>
-                    <AnalyticsDashboard data={analyticsData}/>
+                    <AnalyticsDashboard data={analyticsData} isLoading={isLoadingAnalytics} />
                 ) : (
                     <p>No analytics data available.</p>
                 )}
@@ -121,6 +147,13 @@ const AdminPage = ({handleLogout}) => {
                 <h2>Reset Shop</h2>
                 <div className="button-container">
                     <div className="left-buttons">
+                        {alert.visible && (
+                            <AlertPopover
+                                message={alert.message}
+                                type={alert.type}
+                                onClose={() => setAlert({ ...alert, visible: false })}
+                            />
+                        )}
                         <button onClick={handleResetProducts} className="reset-button">Reset Products</button>
                         <button onClick={handleResetCheckout} className="reset-button">Reset Checkout</button>
                         <button onClick={handleResetLogs} className="reset-button">Reset Logs</button>

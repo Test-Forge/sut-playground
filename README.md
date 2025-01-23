@@ -25,4 +25,28 @@ Open [http://localhost:5001](http://localhost:5001) to view backend in your brow
 API Get services: \
 http://localhost:5001/api/products \
 http://localhost:5001/api/analytics \
-http://localhost:5001/api/logs
+http://localhost:5001/api/logs \
+
+``````
+project/
+├── backend/
+│   ├── package.json                 # Dependencies for the backend
+│   ├── src/                         # Source code for backend functionality
+│   │   ├── app.js                   # Main application entry point for backend
+│   │   ├── routes/                  # API route handlers
+│   │   ├── controllers/             # Business logic for routes
+│   │   └── utils/                   # Helper utilities
+│   ├── db/                          # Database-related files
+│   │   ├── products.json            # Current product data
+│   │   ├── initialProducts.json     # Initial product data for resets
+│   │   ├── logs.json                # Logging of actions
+│   │   └── history.json             # History of procurement or actions
+├── frontend/
+│   ├── package.json                 # Dependencies for the frontend
+│   ├── public/                      # Static assets for the frontend
+│   ├── src/                         # Source code for frontend functionality
+│   │   ├── App.js                   # Main application entry point for frontend
+│   │   ├── components/              # Reusable React components
+│   │   ├── pages/                   # Page-level components
+│   │   ├── styles/                  # CSS and styling files
+│   │   └── utils/                   # Utility functions

@@ -6,6 +6,7 @@ import ProductCard from "../components/ProductCard";
 import ControlButtons from "../components/ControlButtons";
 import CartSidebar from "../components/CartSidebar";
 import ProductCardEdit from "../components/ProductCardEdit";
+import AlertPopover from "../components/AlertPopover";
 import AdminPage from "./AdminPage";
 import API from "../utils/api";
 import "../styles/FormPage.css";
@@ -21,6 +22,13 @@ const FormPage = () => {
     const [filters, setFilters] = useState({ category: "", name: "", sort: "nameAsc" });
     const [currentPage, setCurrentPage] = useState(1);
     const [productsPerPage] = useState(12);
+
+    const [alert, setAlert] = useState({ message: "", type: "", visible: false });
+    const showAlert = (message, type = "info") => {
+        setAlert({ message, type, visible: true });
+        // Auto-close after 5 seconds
+        setTimeout(() => setAlert({ ...alert, visible: false }), 5000);
+    };
 
     useEffect(() => {
         if (loggedInUser) {
@@ -60,10 +68,10 @@ const FormPage = () => {
             const response = await API.post("/products", newProductWithId);
             setProducts([...products, response.data]);
             setIsFormOpen(false);
-            alert("Product added successfully!");
+            showAlert("Product added successfully!", "success");
         } catch (err) {
             console.error("Error adding product:", err);
-            alert("Failed to add product. Please try again.");
+            showAlert("Failed to add product. Please try again.", "error");
         }
     };
 
@@ -75,10 +83,10 @@ const FormPage = () => {
             );
             setProducts(updatedProducts);
             setIsFormOpen(false);
-            alert("Product updated successfully!");
+            showAlert("Product updated successfully!", "success");
         } catch (err) {
             console.error("Error updating product:", err);
-            alert("Failed to update product. Please try again.");
+            showAlert("Failed to update product. Please try again.", "error");
         }
     };
 
@@ -87,10 +95,10 @@ const FormPage = () => {
             await API.delete(`/products/${id}`);
             const updatedProducts = products.filter((product) => product.id !== id);
             setProducts(updatedProducts);
-            alert("Product deleted successfully!");
+            showAlert("Product deleted successfully!", "success");
         } catch (err) {
             console.error("Error deleting product:", err);
-            alert("Failed to delete product. Please try again.");
+            showAlert("Failed to delete product. Please try again.", "error");
         }
     };
 
@@ -102,11 +110,12 @@ const FormPage = () => {
             };
 
             await API.post("/checkout", payload);
-            alert("Checkout successful!");
             setCart([]); // Clear the cart after checkout
+            showAlert("Checkout successful!", "success");
+
         } catch (err) {
             console.error("Error during checkout:", err);
-            alert("Failed to process checkout. Please try again.");
+            showAlert("Failed to process checkout. Please try again.", "error");
         }
     };
 
@@ -133,6 +142,14 @@ const FormPage = () => {
     return (
         <div className="form-page">
             <h1>Welcome, {loggedInUser.role}</h1>
+
+            {alert.visible && (
+                <AlertPopover
+                    message={alert.message}
+                    type={alert.type}
+                    onClose={() => setAlert({ ...alert, visible: false })}
+                />
+            )}
 
             <ControlButtons
                 loggedInUser={loggedInUser}

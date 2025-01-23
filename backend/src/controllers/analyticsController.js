@@ -35,7 +35,7 @@ exports.getAnalytics = (req, res) => {
 
         // Total Revenue
         const totalRevenue = history.reduce(
-            (sum, entry) => sum + entry.totalAmount,
+            (sum, entry) => sum + parseFloat(entry.totalAmount || 0),
             0
         );
 

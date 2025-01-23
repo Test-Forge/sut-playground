@@ -5,7 +5,11 @@ exports.saveCheckout = (req, res) => {
     try {
         const { cart, cartAmount } = req.body;
         const history = readJSON("history.json");
-        const totalAmount = cartAmount.toFixed(2)
+        // Fallback: Calculate totalAmount from the cart if cartAmount is undefined
+        const totalAmount =
+            typeof cartAmount === "number"
+                ? cartAmount.toFixed(2)
+                : cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
 
         const newEntry = {
             id: history.length + 1,
