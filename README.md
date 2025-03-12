@@ -27,6 +27,23 @@ http://localhost:5001/api/products \
 http://localhost:5001/api/analytics \
 http://localhost:5001/api/logs \
 
+## Build Docker Image
+
+```shell
+docker build -t sut-playground .
+docker tag sut-playground ghcr.io/test-forge/sut-playground:latest
+```
+## Run Docker Image
+
+```shell
+docker run --name sut-playground \
+  -p 3000:3000 \
+  -p 5001:5001 \
+  ghcr.io/test-forge/sut-playground:latest
+```
+
+## Project Structure
+
 ``````
 project/
 ├── backend/
@@ -50,3 +67,4 @@ project/
 │   │   ├── pages/                   # Page-level components
 │   │   ├── styles/                  # CSS and styling files
 │   │   └── utils/                   # Utility functions
+``````
