@@ -8,6 +8,7 @@ COPY frontend/package*.json ./
 RUN npm ci --omit=dev
 # Copy the rest of the frontend source code
 COPY frontend/ ./
+RUN npm run build
 
 # --- Stage 2: Build the Backend ---
 FROM node:22-alpine AS backend-builder

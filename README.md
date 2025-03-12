@@ -33,7 +33,7 @@ http://localhost:5001/api/logs \
 docker run --name sut-playground \
   -p 3000:3000 \
   -p 5001:5001 \
-  ghcr.io/test-forge/sut-playground:main
+  ghcr.io/test-forge/sut-playground:latest
 ```
 
 ## Project Structure
