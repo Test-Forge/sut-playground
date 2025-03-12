@@ -1,0 +1,7 @@
+services:
+  sut-playground:
+    image: test-forge/sut-playground:latest
+    container_name: sut-playground
+    ports:
+      - 3000:3000 # UI Port
+      - 5001:5001 # Backend Port

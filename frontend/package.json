@@ -6,6 +6,7 @@
     "axios": "^1.7.9",
     "chart.js": "^4.4.7",
     "cra-template": "1.2.0",
+    "http-server": "^14.1.1",
     "react": "^19.0.0",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
@@ -13,7 +14,9 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "prod": "npx http-server ./build build -p 3000"
   },
   "eslintConfig": {
     "extends": [
